@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:700|Fredoka+One");
+html {
+  background-color: rgba(233, 150, 122, 0.5);
+}
+
+body {
+  background-color: rgba(233, 150, 122, 0.3);
+  margin-top: -18px;
+  padding: 20px;
+}
+
+.container {
+  min-width: 250px;
+  margin-top: 20px;
+  padding: 10px 30px 30px 30px;
+  background-color: rgba(233, 150, 122, 0.7);
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
+.header {
+  position: relative;
+  /*
+  .addbtn {
+  	background-color: rgb(105, 105, 105);
+  	i {
+  		color: white;
+  	}
+   } */
+}
+.header h4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+.header .btn-floating {
+  float: right;
+  background-color: brown;
+  margin: 10px;
+  box-shadow: none;
+  transition-duration: 100ms;
+}
+.header .btn-floating:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.recipe-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  background-color: papayawhip;
+  padding: 20px;
+}
+
+.item, .item * {
+  padding: 0px;
+  margin: 0px;
+}
+
+.item {
+  flex: 0 250px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid white;
+  color: black;
+  cursor: pointer;
+  background-color: khaki;
+}
+.item::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+}
+.item img {
+  height: 100%;
+  width: 100%;
+  transition: all 200ms linear;
+}
+.item .name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  font-family: "Comfortaa";
+  font-size: 22px;
+  line-height: 30px;
+  color: black;
+  border: none;
+  z-index: 1;
+  padding: 7px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms ease-in-out;
+}
+.item .cuisine {
+  position: absolute;
+  top: 65%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+.item .category, .item .preptime {
+  position: absolute;
+  bottom: -45px;
+  padding: 7px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 300ms ease-in-out;
+}
+.item .category {
+  left: 10px;
+}
+.item .preptime {
+  right: 10px;
+}
+
+.item:hover::before {
+  background-color: rgba(244, 164, 96, 0.6);
+}
+.item:hover img {
+  height: 110%;
+  width: 110%;
+}
+.item:hover .name {
+  top: 50px;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  color: black;
+  background-color: rgba(255, 255, 204, 0.7);
+}
+.item:hover .cuisine {
+  left: 50%;
+}
+.item:hover .category, .item:hover .preptime {
+  bottom: 10px;
+}
+
+/*
+.item{
+	.name{ border: none ;}
+}
+
+.item:nth-child(1){
+	.name{ color: black; background-color:rgba(255,255,255,0.8);}
+	&::before{
+			background-color:rgba(255,255,255,0.5);		
+	}}
+.item:nth-child(2){
+	.name{ color: black; background-color:rgba(255,218,185,0.7)}
+	&::before{
+		background-color:rgba(255,218,185,0.6);
+}}
+.item:nth-child(3){
+	.name{ color: black; background-color:rgba(255,255,204,0.7);}
+	&::before{
+	background-color:rgba(255,255,204,0.6);
+}}
+.item:nth-child(4){
+	.name{ color: black; background-color:rgba(222,184,135,0.7);}
+	&::before{
+		background-color:rgba(222,184,135,0.6);
+}}
+.item:nth-child(5){
+	.name{ color: black; background-color:rgba(244,164,96,0.7);}
+	&::before{
+		background-color:rgba(244,164,96,0.6);		
+}
+}
+.item:nth-child(6){
+	.name{ color: black; background-color:rgba(218,165,32,0.7)}
+	&::before{
+		background-color:rgba(218,165,32,0.6);		
+}
+}
+.item:nth-child(7){
+	.name{ color: black; background-color:rgba(255,255,255,1)}
+	&::before{
+		background-color:rgba(255,255,255,1);		
+}
+}
+*/
+@media (max-width: 400px) {
+  h4 {
+    font-size: 25px;
+  }
+
+  .item .name {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+.modal * {
+  border: none;
+}
+
+.modal .modal-footer {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background: rgba(220, 220, 220, 0.5);
+}
+.modal .modal-footer .btn {
+  float: none;
+  flex: 0 100px;
+  margin: 5px;
+}
+
+.modal-content {
+  padding-top: 40px;
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 3em;
+  background-color: #e90d07;
+  padding: 3px;
+  text-shadow: none;
+}
+
+#addModal div.modal-header, #addModal div.modal-body {
+  position: relative;
+}
+#addModal div.modal-header:after, #addModal div.modal-body:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+#addModal .input-field textarea, #addModal .input-field input {
+  background-color: honeydew;
+  padding-left: 3px;
+  border: none;
+}
+#addModal .input-field label {
+  margin-left: 3px;
+  font-size: 1.2em;
+  color: grey;
+  pointer-events: none;
+}
+#addModal .input-field label:not(.label-icon).active {
+  font-size: 1em;
+}
+
+#showModal, #editModal {
+  max-height: 88%;
+  width: 80%;
+  background-color: papayawhip;
+}
+#showModal .modal-dialog, #editModal .modal-dialog {
+  max-width: 80%;
+}
+#showModal .modal-content, #editModal .modal-content {
+  padding-top: 50px;
+}
+#showModal .modal-title, #editModal .modal-title {
+  margin: 0 auto;
+}
+#showModal .modal-body *, #editModal .modal-body * {
+  padding: 5px;
+}
+#showModal .modal-body .midpane, #editModal .modal-body .midpane {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#showModal .modal-body .midpane .ingredients, #showModal .modal-body .midpane .image, #editModal .modal-body .midpane .ingredients, #editModal .modal-body .midpane .image {
+  flex: 1 50%;
+  align-self: center;
+}
+#showModal .modal-body .midpane img, #editModal .modal-body .midpane img {
+  height: 200px;
+  width: 200px;
+}
+#showModal div.details, #editModal div.details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#showModal div.details-left, #showModal div.details-right, #editModal div.details-left, #editModal div.details-right {
+  flex: 1 auto;
+}
+
+#editModal .modal-header, #editModal .details, #editModal .image, #editModal .ingredients {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#showModal .details, #showModal .midpane {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#showModal .modal-header {
+  background-color: lemonchiffon;
+}
+
+#editModal input {
+  text-align: center;
+  background-color: rgba(105, 105, 105, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+#editModal input:focus {
+  background-color: honeydew;
+}
+#editModal .modal-body .details input {
+  text-align: left;
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+}
+#editModal .modal-body .midpane {
+  flex-flow: column-reverse nowrap;
+}
+#editModal .modal-body .midpane .ingredients {
+  align-self: stretch;
+}
+#editModal .modal-body .midpane .ingredients input {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  text-align: left;
+}
+#editModal .modal-body .midpane .ingredients .btn-floating, #editModal .modal-body .midpane .ingredients .btn-floating i {
+  padding: 0px;
+  float: right;
+}
+#editModal .modal-body .midpane .image {
+  align-self: stretch;
+}
+#editModal .modal-body .midpane .image img {
+  height: 100%;
+  width: 100%;
+}
+#editModal .modal-body .midpane .image input {
+  width: 95%;
+  margin-top: 5px;
+}
+#editModal .modal-body .instructions textarea {
+  min-height: 300px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
